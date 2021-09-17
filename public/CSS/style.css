@@ -1,0 +1,306 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+:root{
+    --bg-color : #1e272e;
+    --main-color: #0097e6;
+}
+
+.main_head{
+    background: var(--bg-color);
+}
+
+.main_head .navbar li a{
+    color: #ddd;
+    font-weight: bold;
+}
+
+.main_head .navbar li a:hover{
+    color: cyan;
+}
+.center-content{
+    width: 100%;
+    height: 86vh;
+}
+
+.center-content .left-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.fa-snowflake{
+    color: var(--main-color);
+    animation: round;
+    transition: all linear;
+    animation: round  2s linear infinite;
+}
+
+@keyframes round{
+    0%{
+       transform: rotate(0deg); 
+    }
+    100%{
+        transform: rotate(360deg); 
+     }
+}
+
+
+.center-content .left-center{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.center-content .left-center p{
+    font-size: 1.7rem;
+}
+
+.center-content .left-center h1{
+    font-size: 1.4rem;
+    margin-top: -16px;
+    font-weight: bold;
+    
+}
+
+
+
+.navbar-toggler-icon{
+    
+    background: rgb(250, 233, 233)!important;
+}
+
+
+.center-content .left-center p span{
+    color: rgb(0, 255, 213);
+    font-size: 2rem;
+    font-weight: bolder;
+    border-bottom: 2px solid slateblue;
+}
+
+.center-content .left-center h1 span{
+    color: rgb(0, 119, 255);
+    font-size: 2rem;
+    font-weight: bold;
+    /* border-bottom: 2px solid slateblue; */
+}
+
+
+
+.center-content .left-center a{
+    margin-top: 10px;
+}
+
+.center-content .left-center a button{
+    padding: 3px 25px;
+    border-radius: 25px;
+    background: white;
+    border: 2px solid skyblue;
+    font-weight: bold;
+    box-shadow: 0 2px 6px skyblue;
+    outline: none;
+}
+.center-content .left-center a button:hover{
+    background: rgb(9, 169, 233);
+    color: #ffff;
+}
+
+
+
+footer{
+    color: #fff;
+    background: var(--bg-color);
+    margin-top: auto;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+@media (max-width:768px) {
+    .center-content .left-center{
+        height: auto;
+        margin: 40px 0px;
+    }
+    .center-content .right-center{
+        height: auto;
+        margin-top: 5px;
+
+    }
+
+    .center-content .left-center p{
+        font-size: 1.2rem;
+        color: gray;
+    }
+
+    .center-content .left-center h1{
+        font-size: 1.3rem;
+    }
+}
+
+.right-center figure img{
+   width: 50%!;
+   height: 20%;
+}
+
+/* Weather Style */
+
+.temp_form{
+    width: 60%;
+    margin: 50px auto 6px;
+    position: relative;
+    /* padding: 20px; */
+}
+
+.temp_form input[type="text"]{
+    width: 100%;
+    background:  #000;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 15px 15px ;
+    outline: none;
+    color: #ffff;
+    font-weight: bold;
+}
+.temp_form input[type="submit"]{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    padding: 4px 30px 4px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    background: var(--main-color);
+    color: #ffff;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.temp_form input[type="submit"]:hover{
+    background: #ffff;
+    color: var(--main-color);
+}
+
+::placeholder{
+    color: gray;
+    font-weight: bold;
+}
+.tempInfo{
+    width: 300px;
+    height: 60%;
+    margin: auto;
+    margin-top: 3%;
+    position: relative;
+    background: #000;
+    /* padding: 20px; */
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+    /* color: #dddd; */
+}
+
+.tempInfo .top_layer{
+    background: #2d303d;
+    /* width: 300px; */
+    /* height: 22%; */
+    position: absolute;
+    top: 0px;
+    bottom: 190px;
+    right: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 15px 15px 40px 9px;
+   
+}
+
+.tempInfo .top_layer p{
+    font-size: 1.2rem;
+    color: #ddd;
+    font-weight: bold;
+}
+
+.main_layer{
+    width: 100%;
+    height: 60%;
+    padding: 50px 0px;
+    display: flex;
+    flex-direction: column;
+    
+    
+    
+}
+
+.data_hide{
+    visibility: hidden;
+    transition: all 0.3s linear;
+}
+.main_layer #city_name{
+    font-size: 1rem;
+    color: gray;
+    font-weight: bold;
+    padding: 10px;
+}
+sup{
+    margin-top: -6px;
+}
+.main_layer .middle_layer{
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+    /* font-weight: bold; */
+}
+#today_date{
+    padding-left: 155px;
+}
+.main_layer .middle_layer p,
+.main_layer .middle_layer .fa{
+
+    font-size: 2.7rem;
+    font-weight: bold;
+    /* padding-left: -2px; */
+}
+
+/* ==============TempInfo En==================== */
+
+
+@media (max-width:768px) {
+
+    .temp_form{
+        width: auto;
+    }
+    
+   
+}
+
+@media (max-width:336px){
+    .tempInfo{
+        width: auto;
+    }
+}
+
+
+.error-img{
+    width: 100%;
+    height: 100vh;
+}
+
+.error-img img{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0vh;
+}
